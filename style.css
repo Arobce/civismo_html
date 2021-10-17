@@ -143,8 +143,8 @@ body {
 }
 
 /* Underline Gold */
-.underline-gold{
-    border-bottom: 4px solid var(--civ-yellow);
+.underline-gold {
+  border-bottom: 4px solid var(--civ-yellow);
 }
 
 /* Paragraphs */
@@ -152,8 +152,11 @@ p {
   font-size: 18px;
 }
 
-/* Button */
+h1 {
+  font-family: "Playfair Display", serif;
+}
 
+/* Button */
 .button {
   padding: 0.75rem 2rem;
   text-decoration: none;
@@ -208,22 +211,14 @@ p {
   transform: translate(-50%, -50%);
 }
 
-.loading-spinner img{
-    width: 40px;
+.loading-spinner img {
+  width: 40px;
 }
 
 /* Site Styles */
 
 .site-logo {
   width: 190px;
-  /* position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); */
-  /* animation-name: loading-logo-animation;
-  animation-duration: 0.3s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards; */
 }
 
 /* Wrapepr inside wich the loading takes place */
@@ -264,32 +259,6 @@ section#navbar {
 .navbar__button-group a:first-of-type {
   margin-right: 2.125rem;
 }
-
-/* .navbar__button {
-  padding: 0.75rem 2rem;
-  text-decoration: none;
-  border: none;
-  font-size: 18px;
-}
-
-.navbar__button:hover {
-  text-decoration: none;
-  color: inherit;
-}
-
-.navbar__button-signup {
-  background-color: var(--civ-yellow);
-  text-decoration: none;
-  color: var(--text-blue);
-  font-weight: bold;
-
-  border: 5px solid transparent;
-  background-image: linear-gradient(#fba707, #fba707),
-    linear-gradient(to right, #fba707, #faa307);
-  border-radius: 99999px;
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-} */
 
 .navbar__button-nav {
   background-color: var(--civ-brown);
