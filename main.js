@@ -4,7 +4,7 @@
  * 1. We show the loader and the logo is centered when the page is loading
  * 2. Let the page load
  * 3. The loader is hidden
- * 3. We delay the animation by a second
+ * 3. We delay the "send logo to top" animation by a second
  * 4. The logo is sent to top left
  * 5. The rest of the items are animated by the css
  */
@@ -44,6 +44,7 @@ function logoToTopLeftAnimation() {
       "slow",
       "linear",
       function () {
+        // Hide the loading wrapper and show the underlying page when done
         $(loadingWrapper).hide();
       }
     );
