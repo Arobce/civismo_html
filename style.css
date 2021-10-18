@@ -313,3 +313,35 @@ section#navbar {
   justify-content: center;
   margin: 0 auto;
 }
+
+/* Affaliated Blogs */
+section#affiliated-blogs {
+  padding: 70px 0;
+}
+
+.affiliated-blog__images{
+  height: 40px;
+  width: auto;
+}
+
+.affiliated-blog__row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.affiliated-blog__images--pais{
+  height: 25px;
+}
+
+.affiliated-blog__images--vanguardia{
+  height: 20px;
+}
+
+.affiliated-blog__images--publico{
+  height: 30px;
+}
+
+.affiliated-blog__images--ok_diaro{
+  height: 30px;
+}
