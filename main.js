@@ -1,10 +1,10 @@
 /**
  * Animation Logic
  *
- * 1. We show the loader and the logo is centered when the page is loading
+ * 1. We show the loader and the animated logo is centered when the page is loading
  * 2. Let the page load
- * 3. The loader is hidden
- * 3. We delay the "send logo to top" animation by a second
+ * 3. Stop the animation after the page is loaded and the building is drawn
+ * 4. We delay the "send logo to top" animation by a second
  * 4. The logo is sent to top left
  * 5. The rest of the items are animated by the css
  */
@@ -13,18 +13,16 @@ let loadingWrapper = ".loading-wrapper";
 let loaderClassName = ".loading-spinner";
 let loadingLogoClassname = ".site-logo-loading";
 let originalHeaderLogoClassName = ".site-logo-header";
+let buildingPathSelector = "#building-svg";
 
 $(window).on("load", function () {
-  fadeOutLoader();
-  logoToTopLeftAnimation();
+  // After the animation ends we stop logo animation and push it to the top
+  afterAnimationEnds(() => {
+    console.log("Animation Starts");
+    stopLogoAnimation();
+    logoToTopLeftAnimation();
+  });
 });
-
-/**
- * Fades out the loader gif
- */
-function fadeOutLoader() {
-  $(loaderClassName).fadeOut("slow");
-}
 
 /**
  * Responsible for pushing the logo to top left
@@ -44,7 +42,7 @@ function logoToTopLeftAnimation() {
       "slow",
       "linear",
       function () {
-        // Hide the loading wrapper and show the underlying page when done
+        // Hide the loading wrapper
         $(loadingWrapper).hide();
       }
     );
@@ -64,4 +62,23 @@ function getOffset(elementClass) {
     height: rect.height,
     width: rect.width,
   };
+}
+
+/**
+ * Stops Animation
+ *
+ */
+function stopLogoAnimation() {
+  $(buildingPathSelector).css("animation-play-state", "paused");
+}
+
+/**
+ * Function passed in runs after the building animation completes
+ *
+ * @param function
+ */
+function afterAnimationEnds(afterAnimation) {
+  document
+    .querySelector(buildingPathSelector)
+    .addEventListener("animationiteration", () => afterAnimation(), false);
 }
