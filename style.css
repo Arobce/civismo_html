@@ -901,6 +901,7 @@ section.sidenav-menu {
   margin: 3rem 0;
   padding-bottom: 5px;
   border-bottom: 1px solid var(--civ-white);
+  color: var(--civ-white);
 }
 
 .sidenav-menu-search__field {
