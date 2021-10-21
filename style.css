@@ -227,12 +227,14 @@ h6 {
   position: fixed;
   left: 6vw;
   top: 3vh;
+  z-index: 999;
 }
 
 .navbar__button-group {
   position: fixed;
   right: 2vw;
   top: 5vh;
+  z-index: 999;
 }
 
 .loading-content .loading-spinner {
@@ -240,6 +242,11 @@ h6 {
   left: 50%;
   top: 60%;
   transform: translate(-50%, -50%);
+}
+
+/* Scrollbar */
+.hide-scrollbar{
+  overflow: hidden !important;
 }
 
 /* Site Styles */
@@ -432,6 +439,7 @@ section#navbar {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 /* Affaliated Blogs */
@@ -969,4 +977,14 @@ section.sidenav-menu {
 
 .sidenav-menu__rows--desktop{
   height: 100%;
+}
+
+.navbar--fixed{
+  background-color: transparent;
+  height: 13vh;
+  width: 100vw;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99;
 }

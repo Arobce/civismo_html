@@ -3,6 +3,7 @@ $(window).on("load", function () {
   setMobileNavigationDropdowns();
 });
 
+
 /**
  * Adds functionality to open side nav with animation
  */
@@ -19,6 +20,7 @@ function toggleNavbarOnButtonClick() {
 
   $(".toggle-navbar").click(function () {
     $(navbarClass).toggle("slide", { direction: "right" }, 1000);
+    $('body').toggleClass('hide-scrollbar');
   });
 }
 

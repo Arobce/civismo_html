@@ -16,12 +16,17 @@ let originalHeaderLogoClassName = ".site-logo-header";
 let buildingPathSelector = "#building-svg";
 
 $(window).on("load", function () {
+  // Initially hide scroll bars
+  hideScrollBars();
+
   // After the animation ends we stop logo animation and push it to the top
   afterAnimationEnds(() => {
     console.log("Animation Starts");
     stopLogoAnimation();
     logoToTopLeftAnimation();
   });
+
+  setUpGoDownFunction();
 });
 
 /**
@@ -44,6 +49,9 @@ function logoToTopLeftAnimation() {
       function () {
         // Hide the loading wrapper
         $(loadingWrapper).hide();
+
+        // Show scrollbar
+        showScrollBars();
       }
     );
 }
@@ -81,4 +89,36 @@ function afterAnimationEnds(afterAnimation) {
   document
     .querySelector(buildingPathSelector)
     .addEventListener("animationiteration", () => afterAnimation(), false);
+}
+
+/**
+ * Adds Go down functionality for hero button
+ */
+function setUpGoDownFunction() {
+  let goDownButtonIdentifier = ".go-down-button";
+  let divToGoTo = "#affiliated-blogs";
+
+  // Go to Down Button
+  $(goDownButtonIdentifier).click(function () {
+    $("html, body").animate(
+      {
+        scrollTop: $(divToGoTo).offset().top,
+      },
+      1500
+    );
+  });
+}
+
+/**
+ * Hide scrollbars
+ */
+function hideScrollBars() {
+  $("body").css("overflow", "hidden");
+}
+
+/**
+ * Show scrollbars
+ */
+function showScrollBars() {
+  $("body").css("overflow", "auto");
 }
