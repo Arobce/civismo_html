@@ -12,12 +12,15 @@
 let loadingWrapper = ".loading-wrapper";
 let loaderClassName = ".loading-spinner";
 let loadingLogoClassname = ".site-logo-loading";
-let originalHeaderLogoClassName = ".site-logo-header";
+let originalHeaderLogoClassName = ".site-logo-header-main";
 let buildingPathSelector = "#building-svg";
 
 $(window).on("load", function () {
   // Initially hide scroll bars
   hideScrollBars();
+
+  // Navbar white background when scrolled
+  changeNavbarBgOnScroll();
 
   // After the animation ends we stop logo animation and push it to the top
   afterAnimationEnds(() => {
@@ -35,6 +38,14 @@ $(window).on("load", function () {
 function logoToTopLeftAnimation() {
   let originalLogoPositon = getOffset(originalHeaderLogoClassName);
   let delayTime = 1000;
+
+  console.log($(originalHeaderLogoClassName));
+
+  console.log("position");
+  console.log(originalLogoPositon.top + originalLogoPositon.height / 2 + "top");
+  console.log(
+    originalLogoPositon.left + originalLogoPositon.width / 2 + "bottom"
+  );
 
   $(loadingLogoClassname)
     .delay(delayTime)
@@ -65,8 +76,8 @@ function logoToTopLeftAnimation() {
 function getOffset(elementClass) {
   const rect = $(elementClass)[0].getBoundingClientRect();
   return {
-    left: rect.left + window.scrollX,
-    top: rect.top + window.scrollY,
+    left: rect.left,
+    top: rect.top,
     height: rect.height,
     width: rect.width,
   };
@@ -121,4 +132,54 @@ function hideScrollBars() {
  */
 function showScrollBars() {
   $("body").css("overflow", "auto");
+}
+
+/**
+ * Change navbar background color and logo variant on scroll
+ */
+function changeNavbarBgOnScroll() {
+  let navbarSelector = ".navbar--fixed";
+
+  let elementProperties = getOffset(navbarSelector);
+
+  let topLogoSelector = ".site-logo-header-main";
+
+  // For mobile devices
+  // White bg and red logo
+  if ($(window).width() < 768) {
+    $(navbarSelector).addClass("navbar-fixed-white-bg");
+    changeLogoToRed(topLogoSelector);
+    return;
+  }
+  // FOr other devices
+  $(window).on("scroll", function () {
+    // If the scroll is greater than 100vh and minus the height of the logo
+    // We minus the height to ensure that the bg turns white as soon as the logo touches the next div
+    if ($(window).scrollTop() > $(window).height() - elementProperties.height) {
+      $(navbarSelector).addClass("navbar-fixed-white-bg");
+      changeLogoToRed(topLogoSelector);
+    } else {
+      $(navbarSelector).removeClass("navbar-fixed-white-bg");
+      changeLogoToWhite(topLogoSelector);
+    }
+  });
+}
+
+/**
+ * Change logo to red variant
+ *
+ * @param logoSelector
+ */
+function changeLogoToRed(logoSelector) {
+  $(logoSelector).attr("src", "./assets/logo-red.svg");
+}
+
+/**
+ * Change logo to white variant
+ *
+ * @param logoSelector
+ */
+
+function changeLogoToWhite(logoSelector) {
+  $(logoSelector).attr("src", "./assets/logo.svg");
 }

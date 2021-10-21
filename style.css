@@ -173,6 +173,7 @@ h6 {
   padding: 0.75rem 2rem;
   text-decoration: none;
   border: none;
+  cursor: pointer;
   font-size: 18px;
 }
 
@@ -230,11 +231,27 @@ h6 {
   z-index: 999;
 }
 
+/* For upto large devices */
+@media screen and (max-width: 1400px) {
+  .site-logo-header {
+    top: 2vh;
+  }
+}
+
+
+
 .navbar__button-group {
   position: fixed;
   right: 2vw;
   top: 5vh;
   z-index: 999;
+}
+
+/* For upto large devices */
+@media screen and (max-width: 1400px) {
+  .navbar__button-group {
+    top: 3vh;
+  }
 }
 
 .loading-content .loading-spinner {
@@ -981,10 +998,32 @@ section.sidenav-menu {
 
 .navbar--fixed{
   background-color: transparent;
-  height: 13vh;
+  height: 16vh;
   width: 100vw;
   position: fixed;
   right: 0;
   top: 0;
   z-index: 99;
 }
+
+/* Lower than desktop screens */
+@media screen and (max-width: 1400px) {
+  .navbar--fixed {
+    height: 12vh;
+  }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 576px) {
+  .navbar--fixed {
+    height: 13vh;
+    background-color: var(--civ-white);
+  }
+}
+
+
+.navbar-fixed-white-bg{
+  border-bottom: 1px solid #dfdfdf;
+  background-color: var(--civ-white);
+}
+

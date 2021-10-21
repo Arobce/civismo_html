@@ -18,9 +18,11 @@ function toggleNavbarOnButtonClick() {
 
   console.log(navbarClass);
 
-  $(".toggle-navbar").click(function () {
+  $(".toggle-navbar").click(function (e) {
+    // Removes a wierd issue where the page jumps to top
+    e.preventDefault();
     $(navbarClass).toggle("slide", { direction: "right" }, 1000);
-    $('body').toggleClass('hide-scrollbar');
+    // $('body').toggleClass('hide-scrollbar');
   });
 }
 
