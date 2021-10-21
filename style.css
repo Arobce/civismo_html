@@ -356,8 +356,8 @@ section#navbar {
 }
 
 /* For mobile devices */
-@media screen and (max-width: 576px){
-  .hero-content{
+@media screen and (max-width: 576px) {
+  .hero-content {
     margin: 12rem auto 0 auto;
   }
 }
@@ -383,7 +383,7 @@ section#navbar {
 }
 
 /* For mobile devices */
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
   .hero__title {
     font-size: 3rem;
     width: 100%;
@@ -404,12 +404,11 @@ section#navbar {
 }
 
 /* For mobile devices */
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
   .hero__text-wrapper {
     width: 100%;
   }
 }
-
 
 .hero__text {
   font-size: 1.4rem;
@@ -417,7 +416,7 @@ section#navbar {
 }
 
 /* For mobile devices */
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
   .hero__text {
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -452,7 +451,7 @@ section#affiliated-blogs {
   flex-wrap: wrap;
 }
 
-.affiliated-blog__row div{
+.affiliated-blog__row div {
   margin-bottom: 20px;
 }
 
@@ -478,7 +477,7 @@ section#quick-access {
   justify-content: space-between;
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
   section#quick-access {
     flex-wrap: wrap;
   }
@@ -490,7 +489,7 @@ section#quick-access {
 }
 
 /* For mobile devices */
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
   .quick-access__item {
     width: 100%;
   }
@@ -574,7 +573,7 @@ section#register-home {
 
 /* For Up to Medium Sized Devices */
 @media screen and (max-width: 768px) {
-  .register-home__register-form-wrapper{
+  .register-home__register-form-wrapper {
     margin-top: 60px;
   }
 }
@@ -656,14 +655,14 @@ footer {
 }
 
 /* For mobile devicses */
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
   .footer__row > div {
     margin-bottom: 80px;
     text-align: center;
   }
 }
 
-.footer__row--main{
+.footer__row--main {
   text-align: center;
 }
 
@@ -682,11 +681,10 @@ footer {
 
 /* For Up to Medium Sized Devices */
 @media screen and (max-width: 768px) {
-  .footer-copyright__content div{
+  .footer-copyright__content div {
     margin-top: 30px;
   }
 }
-
 
 .footer-copyright__links {
   font-size: 18px;
@@ -696,12 +694,12 @@ footer {
 }
 
 /* For mobile */
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
   .footer-copyright__links {
     flex-wrap: wrap;
   }
 
-  .footer-copyright__link{
+  .footer-copyright__link {
     margin-bottom: 10px;
   }
 }
@@ -730,7 +728,7 @@ footer {
 }
 
 /* SideNav Menu */
-section#sidenav-menu {
+section.sidenav-menu {
   position: fixed;
   z-index: 9999;
   background-color: var(--civ-white);
@@ -789,8 +787,10 @@ section#sidenav-menu {
   font-weight: 600;
 }
 
-.sidenav-menu__rows {
-  height: 100%;
+.sidenav-menu-rows__content {
+  height: calc(60vh - 7rem);
+  display: flex;
+  flex-direction: column;
 }
 
 .sidenav-menu-colquick-access-item__image {
@@ -858,7 +858,7 @@ section#sidenav-menu {
 }
 
 /* For mobile devices */
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
   .button-signup--header {
     display: none;
   }
@@ -899,4 +899,74 @@ section#sidenav-menu {
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: var(--civ-white);
+}
+
+.sidenav-menu__rows {
+  margin-top: 13vh;
+}
+
+.sidenav-menu__row {
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidenav-menu__row:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+
+.sidenav-menu-row__title {
+  font-weight: bold;
+}
+
+
+.sidenav-menu-row__links {
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2.25rem;
+}
+
+.sidenav-menu-row__links a {
+  flex-basis: 33.3%;
+  margin-bottom: .75rem;
+  color: var(--civ-text-primary);
+}
+
+.sidenav-menu-row__links{
+  display: none;
+}
+
+.flex{
+  display: flex;
+}
+
+.sidenav-menu-row__bottom{
+  background-color: var(--civ-primary);
+  height: 41vh;
+}
+
+.sidenav-menu-languages--row{
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+.sidenav-menu__search--row-wrapper{
+  width: 60%;
+  margin: 3vh auto;
+}
+
+.sidenav-menu__search--row{
+  margin: 0;
+}
+
+.sidenav-menu__bottom-links--row{
+  margin: 3vh 0;
+}
+
+.sidenav-menu__rows--desktop{
+  height: 100%;
 }

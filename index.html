@@ -43,7 +43,6 @@
       crossorigin="anonymous"
     ></script>
 
-
     <!-- Animate Css -->
     <link
       rel="stylesheet"
@@ -69,7 +68,10 @@
                 animate__animated animate__fadeInRight animate__delay-4s
               "
             >
-              <a href="#" role="button" class="button button--primary button-signup--header"
+              <a
+                href="#"
+                role="button"
+                class="button button--primary button-signup--header"
                 >Iniciar sesión</a
               >
               <a
@@ -288,7 +290,12 @@
         <div class="container">
           <div class="row footer__row">
             <div class="footer__row--main col-lg-3 col-md-4">
-              <img class="site-logo" src="./assets/logo.png" alt="Civismo" srcset="" />
+              <img
+                class="site-logo"
+                src="./assets/logo.png"
+                alt="Civismo"
+                srcset=""
+              />
               <div class="footer__address">
                 <p>
                   info@civismo.org<br />Paseo de la Castellana 114,<br />esc.1,
@@ -369,9 +376,7 @@
             viewBox="0 0 238.875 119.094"
           >
             <defs>
-              <style>
-               
-              </style>
+              <style></style>
             </defs>
             <path
               id="Layer_66"
@@ -503,7 +508,7 @@
     </div>
 
     <!-- SideNav Menu -->
-    <section id="sidenav-menu">
+    <section id="sidenav-menu" class="sidenav-menu sidenav-menu--desktop">
       <section>
         <img
           class="site-logo site-logo-header site-logo--sidenav-menu"
@@ -524,7 +529,7 @@
         </div>
       </section>
 
-      <div class="row row-cols-5 sidenav-menu__rows">
+      <div class="row row-cols-5 sidenav-menu__rows--desktop">
         <div class="col sidenav-menu__col sidenav-menu__col--sobre">
           <h4 class="sidenav-menu-col__title">Sobre Civismo</h4>
           <div class="sidenav-menu-col__image">
@@ -661,6 +666,114 @@
               <i class="fab fa-lg fa-twitter sidenav-menu-social__icons"></i>
               <i class="fab fa-lg fa-youtube sidenav-menu-social__icons"></i>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sidenav-menu" class="sidenav-menu sidenav-menu--mobile">
+      <section>
+        <img
+          class="site-logo site-logo-header site-logo--sidenav-menu"
+          src="./assets/logo-red.svg"
+          alt=""
+        />
+        <div class="navbar__button-group navbar__button-group--sidenav-menu">
+          <a href="#" role="button" class="button button--primary button-signup"
+            >Iniciar sesión</a
+          >
+          <a
+            href="#"
+            role="button"
+            class="toggle-navbar button navbar__button-nav"
+          >
+            Menu <i class="fas fa-times"></i>
+          </a>
+        </div>
+      </section>
+
+      <div class="sidenav-menu__rows">
+        <div class="sidenav-menu-rows__content">
+          <div class="sidenav-menu__row">
+            <div class="sidenav-menu-row__title">
+              <h4>Sobre Civismo <i class="fas fa-caret-down"></i></h4>
+            </div>
+            <div class="sidenav-menu-row__links">
+              <a href="#">Quienes somos</a>
+              <a href="#">Trabaja con Nosotros</a>
+              <a href="#">Equipo Civismo</a>
+              <a href="#">Civismo en los medios</a>
+              <a href="#">Premio Sociedad Civil</a>
+            </div>
+          </div>
+          <div class="sidenav-menu__row">
+            <div class="sidenav-menu-row__title">
+              <h4>Proyectos Descados <i class="fas fa-caret-down"></i></h4>
+            </div>
+            <div class="sidenav-menu-row__links">
+              <a href="#">Quienes somos</a>
+              <a href="#">Trabaja con Nosotros</a>
+              <a href="#">Equipo Civismo</a>
+              <a href="#">Civismo en los medios</a>
+              <a href="#">Premio Sociedad Civil</a>
+            </div>
+          </div>
+          <div class="sidenav-menu__row">
+            <div class="sidenav-menu-row__title">
+              <h4>Ideas y Argumentarios <i class="fas fa-caret-down"></i></h4>
+            </div>
+            <div class="sidenav-menu-row__links">
+              <a href="#">Quienes somos</a>
+              <a href="#">Trabaja con Nosotros</a>
+              <a href="#">Equipo Civismo</a>
+              <a href="#">Civismo en los medios</a>
+              <a href="#">Premio Sociedad Civil</a>
+            </div>
+          </div>
+          <div class="sidenav-menu__row">
+            <div class="sidenav-menu-row__title">
+              <h4>Temas <i class="fas fa-caret-down"></i></h4>
+            </div>
+            <div class="sidenav-menu-row__links">
+              <a href="#">Quienes somos</a>
+              <a href="#">Trabaja con Nosotros</a>
+              <a href="#">Equipo Civismo</a>
+              <a href="#">Civismo en los medios</a>
+              <a href="#">Premio Sociedad Civil</a>
+            </div>
+          </div>
+        </div>
+        <div class="sidenav-menu-row__bottom">
+          <div class="sidenav-menu-languages sidenav-menu-languages--row">
+            <div class="sidenav-menu-language">
+              <img src="./assets/spain.svg" alt="Espanol" />
+            </div>
+            <div class="sidenav-menu-language">
+              <img src="./assets/en.svg" alt="English" />
+            </div>
+          </div>
+          <div class="sidenav-menu__search--row-wrapper">
+            <div class="sidenav-menu__search sidenav-menu__search--row">
+              <i class="fas fa-search"></i>
+              <input
+                type="text"
+                class="sidenav-menu-search__field"
+                placeholder="Buscar"
+              />
+            </div>
+          </div>
+          <div class="sidenav-menu__bottom-links sidenav-menu__bottom-links--row">
+            <a class="sidenav-menu__bottom-link" href="#"
+              >Terminos y Condiciones</a
+            >
+            <a class="sidenav-menu__bottom-link" href="#"
+              >Polica de Protection de Datos</a
+            >
+            <a class="sidenav-menu__bottom-link" href="#">Contacto</a>
+          </div>
+          <div class="sidenav-menu__social">
+            <i class="fab fa-lg fa-twitter sidenav-menu-social__icons"></i>
+            <i class="fab fa-lg fa-youtube sidenav-menu-social__icons"></i>
           </div>
         </div>
       </div>
