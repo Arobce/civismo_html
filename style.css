@@ -343,6 +343,10 @@ section#navbar {
   cursor: pointer;
 }
 
+.go-down-button__img{
+  width: 25px;
+}
+
 /* Affaliated Blogs */
 section#affiliated-blogs {
   padding: 70px 0 40px 0;
@@ -788,6 +792,11 @@ section.sidenav-menu {
   text-align: center;
 }
 
+.sidenav-menu-language__img--active{
+  box-shadow: -1px 0px 14px 4px rgb(255 255 255);
+  -webkit-box-shadow: -1px 0px 14px 4px rgb(255 255 255);
+  -moz-box-shadow: -1px 0px 14px 4px rgb(255 255 255);
+}
 
 /* For mobile devices */
 @media screen and (max-width: 576px) {
